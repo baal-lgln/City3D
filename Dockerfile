@@ -66,7 +66,7 @@ FROM ubuntu:24.04 as city3d
 WORKDIR /city3d
 
 # copy compiled assets from build-step
-COPY --chown=ubuntu:ubuntu --from=build-step /city3d/build/Release/bin /city3d
+COPY --chown=ubuntu:ubuntu --chmod=755 --from=build-step /city3d/build/Release/bin /city3d
 
 USER ubuntu
 

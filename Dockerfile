@@ -68,4 +68,4 @@ WORKDIR /city3d
 # copy compiled assets from build-step
 COPY --from=build-step /city3d/build/Release/bin /city3d
 
-CMD [ "./city3d -h" ]
+CMD ["sh", "-c", "./city3d -h"]
